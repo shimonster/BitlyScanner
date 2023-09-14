@@ -115,8 +115,8 @@
                 partRow = JSON.parse(xhr.responseText)["values"][0].findIndex((testValue) => testValue === target) + 1;
                 console.log("part row: " + partRow);
                 console.log(JSON.parse(xhr.responseText));
-                console.log("https://docs.google.com/spreadsheets/d/" + spreadsheetFileId.value + "/edit?pli=1#gid=" + sheetGid.value + "&range=A" + partRow);
-                window.open("https://docs.google.com/spreadsheets/d/" + spreadsheetFileId.value + "/edit?pli=1#gid=" + sheetGid.value + "&range=A" + partRow);
+                console.log("https://docs.google.com/spreadsheets/d/" + spreadsheetFileId.value + "/edit?pli=1#gid=" + sheetGid.value + "&range=" + partRow + ":" + partRow);
+                window.open("https://docs.google.com/spreadsheets/d/" + spreadsheetFileId.value + "/edit?pli=1#gid=" + sheetGid.value + "&range=" + partRow + ":" + partRow);
             } else {
                 console.log(`Error: ${xhr.error}`);
             }
